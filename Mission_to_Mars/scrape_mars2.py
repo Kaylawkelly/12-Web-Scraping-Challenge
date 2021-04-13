@@ -1,8 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# In[ ]:
-
 
 # Dependencies and Setup
 from bs4 import BeautifulSoup
@@ -13,7 +8,6 @@ from webdriver_manager.chrome import ChromeDriverManager
 import nbconvert
 
 
-# In[ ]:
 
 
 # MAC: Set Executable Path & Initialize Chrome Browser
@@ -21,13 +15,9 @@ executable_path = {'executable_path': ChromeDriverManager().install()}
 browser = Browser('chrome', **executable_path, headless=False)
 
 
-# In[ ]:
-
-
 mars={}
 
 
-# In[ ]:
 
 
 #NASA Mars News Site
@@ -35,7 +25,6 @@ url = "https://redplanetscience.com/"
 browser.visit(url)
 
 
-# In[ ]:
 
 
 # Parse Results HTML with BeautifulSoup>
