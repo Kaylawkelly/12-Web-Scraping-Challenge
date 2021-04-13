@@ -1,9 +1,9 @@
 def scrape():
     # Import dependencies
-    from splinter import Browser
     from bs4 import BeautifulSoup
-    from selenium import webdriver
+    from splinter import Browser
     import pandas as pd
+    from webdriver_manager.chrome import ChromeDriverManager
   
  # MAC: Set Executable Path & Initialize Chrome Browser
    
