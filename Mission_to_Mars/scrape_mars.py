@@ -181,6 +181,7 @@ mars["hemispheres"]=hemisphere_image_url
 
 
 # In[24]:
+browser.quit()
 
 
 
