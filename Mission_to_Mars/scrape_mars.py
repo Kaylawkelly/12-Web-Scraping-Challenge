@@ -80,8 +80,7 @@ def scrape():
     # close the browser
     browser.quit()
     
-    # Store in dictionary
- 
+
 
 
     return mars
