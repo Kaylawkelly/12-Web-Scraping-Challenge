@@ -25,7 +25,7 @@ def home():
 def scrape():
 
     # Run the scrape function
-    mars_data = scrape_mars.scrape()
+    mars_data = scrape_mars2.scrape()
     
     #scrape_info(def scrape()))
 

@@ -1,12 +1,12 @@
-def scrape():
-    # Import dependencies
-    from bs4 import BeautifulSoup
-    from splinter import Browser
-    import pandas as pd
-    from webdriver_manager.chrome import ChromeDriverManager
+
+# Import dependencies
+from bs4 import BeautifulSoup
+from splinter import Browser
+import pandas as pd
+from webdriver_manager.chrome import ChromeDriverManager
   
  # MAC: Set Executable Path & Initialize Chrome Browser
-   
+def scrape():   
     executable_path = {'executable_path': '/usr/local/bin/chromedriver'}
     browser = Browser('chrome', **executable_path, headless=False)
 
@@ -20,6 +20,7 @@ def scrape():
     
     html = browser.html
     news_soup = BeautifulSoup(html, "html.parser")
+    
     #News
     news_title=news_soup.find("div", class_="content_title").text
     news_p=news_soup.find("div", class_="article_teaser_body").text
@@ -70,6 +71,11 @@ def scrape():
     hemisphere_image_url
     mars["hemispheres"]=hemisphere_image_url
 
+
+    # close the browser
+    browser.quit()
+
+    
     # Return one python dictionary containing all of the scraped data
     mars = {'news_title':news_title}
     mars ['news_p']=news_p
@@ -77,10 +83,7 @@ def scrape():
     mars['facts']=df_html
     mars['hemispheres']=hemisphere_image_url
 
-    # close the browser
-    browser.quit()
-    
-
+   
 
 
     return mars
