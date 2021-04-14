@@ -5,6 +5,7 @@ from splinter import Browser
 import pandas as pd
 from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
+driver = webdriver.Chrome(ChromeDriverManager().install())
   
  # MAC: Set Executable Path & Initialize Chrome Browser
 def scrape():   
