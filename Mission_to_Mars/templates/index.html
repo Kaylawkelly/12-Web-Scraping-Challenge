@@ -47,10 +47,10 @@
 
         <div class="row">
             {% for hemispheres in mars.hemispheres %}
-            <div class="col-md-6">
+            <div class="col-md-12">
                 <div class="card">
                     <div class="card-body">
-                        <img src="{{ img_url }}" class="card-img-top image-photos" alt="...">
+                        <img src="{{ hemispheres.img_url }}" class="card-img-top image-photos" alt="...">
                         <h3 class="card-title">{{ hemispheres.title }} Enhanced</h3>
                     </div>
                 </div>
