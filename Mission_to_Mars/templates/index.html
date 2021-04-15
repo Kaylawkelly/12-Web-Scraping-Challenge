@@ -3,9 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Mars data</title>
+    <title>Mission to Mars</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
 </head>
@@ -36,7 +34,7 @@
             </div>
             <div class="col-lg-4">
                 <h2>Mars Facts</h2>
-                {{mars_info.table_html | safe}}
+                {{mars.facts | safe}}
             </div>
         </div>
 
@@ -53,7 +51,7 @@
                 <div class="card">
                     <div class="card-body">
                         <img src="{{ img_url }}" class="card-img-top image-photos" alt="...">
-                        <h3 class="card-title">{{ hemisphere.title }} Enhanced</h3>
+                        <h3 class="card-title">{{ hemispheres.title }} Enhanced</h3>
                     </div>
                 </div>
             </div>
